@@ -50,8 +50,7 @@ public class WebController {
      */
     @RequestMapping("/")
     public String login() {
-//        return "user/login";
-        return "redirect:gotoauthpage";
+        return "user/login";
     }
 
     /**
