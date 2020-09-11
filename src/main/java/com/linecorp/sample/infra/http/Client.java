@@ -13,7 +13,7 @@
  * License for the specific language governing permissions and limitations
  * under the License.
  */
-package com.linecorp.sample.login.infra.http;
+package com.linecorp.sample.infra.http;
 
 import java.io.IOException;
 import java.util.function.Function;

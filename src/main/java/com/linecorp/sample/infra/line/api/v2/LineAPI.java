@@ -13,10 +13,10 @@
  * License for the specific language governing permissions and limitations
  * under the License.
  */
-package com.linecorp.sample.login.infra.line.api.v2;
+package com.linecorp.sample.infra.line.api.v2;
 
-import com.linecorp.sample.login.infra.line.api.v2.response.AccessToken;
-import com.linecorp.sample.login.infra.line.api.v2.response.Verify;
+import com.linecorp.sample.infra.line.api.v2.response.Verify;
+import com.linecorp.sample.infra.line.api.v2.response.AccessToken;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

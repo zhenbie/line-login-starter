@@ -13,19 +13,19 @@
  * License for the specific language governing permissions and limitations
  * under the License.
  */
-package com.linecorp.sample.login.infra.line.api.v2;
+package com.linecorp.sample.infra.line.api.v2;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.function.Function;
 import java.util.List;
 
+import com.linecorp.sample.infra.http.Client;
+import com.linecorp.sample.infra.line.api.v2.response.Verify;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-import com.linecorp.sample.login.infra.http.Client;
-import com.linecorp.sample.login.infra.line.api.v2.response.AccessToken;
-import com.linecorp.sample.login.infra.line.api.v2.response.Verify;
+import com.linecorp.sample.infra.line.api.v2.response.AccessToken;
 
 import retrofit2.Call;
 
@@ -34,7 +34,7 @@ import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.JWTVerificationException;
 import com.auth0.jwt.interfaces.DecodedJWT;
 import com.auth0.jwt.exceptions.JWTDecodeException;
-import com.linecorp.sample.login.infra.line.api.v2.response.IdToken;
+import com.linecorp.sample.infra.line.api.v2.response.IdToken;
 
 /**
  * <p>LINE v2 API Access</p>

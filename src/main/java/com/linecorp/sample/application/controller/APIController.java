@@ -13,17 +13,17 @@
  * License for the specific language governing permissions and limitations
  * under the License.
  */
-package com.linecorp.sample.login.application.controller;
+package com.linecorp.sample.application.controller;
 
 import javax.servlet.http.HttpSession;
 
+import com.linecorp.sample.infra.line.api.v2.response.Verify;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.linecorp.sample.login.infra.line.api.v2.LineAPIService;
-import com.linecorp.sample.login.infra.line.api.v2.response.AccessToken;
-import com.linecorp.sample.login.infra.line.api.v2.response.Verify;
+import com.linecorp.sample.infra.line.api.v2.LineAPIService;
+import com.linecorp.sample.infra.line.api.v2.response.AccessToken;
 
 @RestController
 public class APIController {

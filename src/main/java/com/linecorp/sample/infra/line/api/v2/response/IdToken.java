@@ -13,7 +13,7 @@
  * License for the specific language governing permissions and limitations
  * under the License.
  */
-package com.linecorp.sample.login.infra.line.api.v2.response;
+package com.linecorp.sample.infra.line.api.v2.response;
 
 public final class IdToken {
     public final String iss;

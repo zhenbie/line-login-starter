@@ -13,22 +13,24 @@
  * License for the specific language governing permissions and limitations
  * under the License.
  */
-package com.linecorp.sample.login.application.controller;
+package com.linecorp.sample.application.controller;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.util.Arrays;
 
+import com.linecorp.sample.infra.utils.CommonUtils;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.linecorp.sample.login.infra.line.api.v2.LineAPIService;
-import com.linecorp.sample.login.infra.line.api.v2.response.AccessToken;
-import com.linecorp.sample.login.infra.line.api.v2.response.IdToken;
-import com.linecorp.sample.login.infra.utils.CommonUtils;
+import com.linecorp.sample.infra.line.api.v2.LineAPIService;
+import com.linecorp.sample.infra.line.api.v2.response.AccessToken;
+import com.linecorp.sample.infra.line.api.v2.response.IdToken;
 
 /**
  * <p>user web application pages</p>
@@ -49,7 +51,9 @@ public class WebController {
      * <p>Login Type is to log in on any desktop or mobile website
      */
     @RequestMapping("/")
-    public String login() {
+    public String login(HttpServletRequest request) {
+        String merchantId = request.getParameter("merchantId");
+        System.out.println("merchantId: " + merchantId);
         return "user/login";
     }
 
@@ -107,6 +111,7 @@ public class WebController {
             logger.debug("refresh_token : " + token.refresh_token);
             logger.debug("id_token : " + token.id_token);
         }
+
         httpSession.setAttribute(ACCESS_TOKEN, token);
         return "redirect:/success";
     }

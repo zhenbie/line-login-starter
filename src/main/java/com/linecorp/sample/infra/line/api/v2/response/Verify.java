@@ -13,27 +13,18 @@
  * License for the specific language governing permissions and limitations
  * under the License.
  */
-package com.linecorp.sample.login.infra.utils;
+package com.linecorp.sample.infra.line.api.v2.response;
 
-import java.security.SecureRandom;
-import java.util.Base64;
+public final class Verify {
 
-/**
- * <p>Common utilities</p>
- */
-public final class CommonUtils {
+    public final String scope;
+    public final String client_id;
+    public final Integer expires_in;
 
-    private static final SecureRandom RANDOM = new SecureRandom();
-
-    private CommonUtils() { };
-
-    /**
-     * <p>Generate Token</p>
-     */
-    public static String getToken() {
-        byte[] bytes = new byte[32];
-        RANDOM.nextBytes(bytes);
-        String token = Base64.getUrlEncoder().withoutPadding().encodeToString(bytes);
-        return token;
+    public Verify(String scope, String client_id, Integer expires_in) {
+        this.scope = scope;
+        this.client_id = client_id;
+        this.expires_in = expires_in;
     }
+
 }
