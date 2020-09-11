@@ -52,8 +52,8 @@ public class WebController {
      */
     @RequestMapping("/")
     public String login(HttpServletRequest request) {
-        String path = request.getContextPath();
-        System.out.println("merchantId: " + path);
+        String liffState = request.getParameter("liff.state");
+        System.out.println("liff.state: " + liffState);
         return "user/login";
     }
 
