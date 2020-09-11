@@ -51,8 +51,8 @@ public class WebController {
      * <p>Login Type is to log in on any desktop or mobile website
      */
     @RequestMapping("/")
-    public String login(HttpRequest request) {
-        String path = request.getURI().toString();
+    public String login(HttpServletRequest request) {
+        String path = request.getServletPath();
         System.out.println("merchantId: " + path);
         return "user/login";
     }
