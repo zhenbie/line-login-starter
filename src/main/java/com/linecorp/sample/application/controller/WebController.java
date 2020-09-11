@@ -52,7 +52,7 @@ public class WebController {
      */
     @RequestMapping("/")
     public String login(HttpServletRequest request) {
-        String path = request.getServletPath();
+        String path = request.getContextPath();
         System.out.println("merchantId: " + path);
         return "user/login";
     }
