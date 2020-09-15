@@ -52,7 +52,7 @@ public class WebController {
      */
     @RequestMapping("/")
     public String login(HttpServletRequest request) {
-        return "user/login";
+        return "redirect:" + "/gotoauthpage";
     }
 
     /**
