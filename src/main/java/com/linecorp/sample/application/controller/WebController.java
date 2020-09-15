@@ -52,8 +52,6 @@ public class WebController {
      */
     @RequestMapping("/")
     public String login(HttpServletRequest request) {
-        String liffState = request.getParameter("liff.state");
-        System.out.println("liff.state: " + liffState);
         return "user/login";
     }
 
